@@ -11,48 +11,50 @@ export class AppComponent {
 
   items = ['nicolas', 'julian', 'perez'];
 
+  power = 10;
+
   products: Product[] = [
     {
       id: '1',
       image: 'assets/images/camiseta.png',
       title: 'Camiseta',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     },
     {
       id: '2',
       image: 'assets/images/hoodie.png',
       title: 'Hoodie',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     },
     {
       id: '3',
       image: 'assets/images/mug.png',
       title: 'Mug',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     },
     {
       id: '4',
       image: 'assets/images/pin.png',
       title: 'Pin',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     },
     {
       id: '5',
       image: 'assets/images/stickers1.png',
       title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     },
     {
       id: '6',
       image: 'assets/images/stickers2.png',
       title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
+      price: 60,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu est ut felis rutrum dapibus. Sed finibus.'
     }
   ];
 
