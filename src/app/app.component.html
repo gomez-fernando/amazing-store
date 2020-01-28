@@ -1,4 +1,6 @@
 <input type="text" [(ngModel)]="title">
+
+
 <br>
 Estoy escribiendo: <br>
 {{ title }}
@@ -27,9 +29,14 @@ Estoy escribiendo: <br>
 </ul>
 <div>
 </div>
-<div *ngFor="let product of products">
-  {{ product.title }}
+<div class="product-grid">
+  <!-- {{ product.title }} -->
   <!-- <img src="{{ product.image }}" alt=""> o también se puede hacer así -->
-  <img [src]="product.image" alt="">
-  {{ product.price }}
+  <!-- <img [src]="product.image" alt="">
+  {{ product.price }} -->
+  <app-product
+    *ngFor="let product of products"
+    (productClicked)="clickProduct($event)"
+    [product]="product">
+  </app-product>
 </div>

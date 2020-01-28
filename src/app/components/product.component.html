@@ -1,0 +1,5 @@
+<h3>{{ product.title }}</h3>
+<!-- <img src="{{ product.image }}" alt=""> o también se puede hacer así -->
+<img [src]="product.image" alt="">
+<strong>{{ product.price }}</strong>
+<button (click)="addCart()">Agregar al carrito</button>
