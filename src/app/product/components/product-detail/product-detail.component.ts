@@ -26,8 +26,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   fetchProduct(id: string) {
-    this.productsService.getProduct(id)
-    .subscribe(product => {
+    this.productsService.getProduct(id).subscribe(product => {
       this.product = product;
     });
   }
@@ -40,9 +39,25 @@ export class ProductDetailComponent implements OnInit {
       price: 3000,
       description: 'nuevo producto'
     };
-    this.productsService.createProduct(newProduct)
-    .subscribe(product => {
+    this.productsService.createProduct(newProduct).subscribe(product => {
       console.log(product);
+    });
+  }
+
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      price: 55555,
+      description: 'edicion descripcion'
+    };
+    this.productsService.updateProduct('2', updateProduct).subscribe(product => {
+      console.log(product);
+    });
+  }
+
+  deleteProduct() {
+    this.productsService.deleteProduct('2')
+      .subscribe(rta => {
+      console.log(rta);
     });
   }
 }
