@@ -10,12 +10,13 @@ import { Product } from './../../../core/models/product.model';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+
   product: Product;
 
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
@@ -26,7 +27,8 @@ export class ProductDetailComponent implements OnInit {
   }
 
   fetchProduct(id: string) {
-    this.productsService.getProduct(id).subscribe(product => {
+    this.productsService.getProduct(id)
+    .subscribe(product => {
       this.product = product;
     });
   }
@@ -39,25 +41,28 @@ export class ProductDetailComponent implements OnInit {
       price: 3000,
       description: 'nuevo producto'
     };
-    this.productsService.createProduct(newProduct).subscribe(product => {
+    this.productsService.createProduct(newProduct)
+    .subscribe(product => {
       console.log(product);
     });
   }
 
   updateProduct() {
     const updateProduct: Partial<Product> = {
-      price: 55555,
-      description: 'edicion descripcion'
+      price: 555555,
+      description: 'edicion titulo'
     };
-    this.productsService.updateProduct('2', updateProduct).subscribe(product => {
+    this.productsService.updateProduct('2', updateProduct)
+    .subscribe(product => {
       console.log(product);
     });
   }
 
   deleteProduct() {
-    this.productsService.deleteProduct('2')
-      .subscribe(rta => {
+    this.productsService.deleteProduct('222')
+    .subscribe(rta => {
       console.log(rta);
     });
   }
+
 }

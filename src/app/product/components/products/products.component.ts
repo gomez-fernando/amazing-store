@@ -9,11 +9,12 @@ import { ProductsService } from './../../../core/services/products/products.serv
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+
   products: Product[] = [];
 
   constructor(
     private productsService: ProductsService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.fetchProducts();
@@ -26,9 +27,9 @@ export class ProductsComponent implements OnInit {
 
   fetchProducts() {
     this.productsService.getAllProducts()
-      .subscribe(products => {
-        this.products = products;
-
-      });
+    .subscribe(products => {
+      this.products = products;
+    });
   }
+
 }

@@ -4,7 +4,7 @@
     <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
   </mat-card-header>
   <div class="crop-image">
-    <img [src]="product.image" alt="product image">
+    <img [src]="product.image" alt="">
   </div>
   <mat-card-content>
     <p>{{ product.description | slice:0:10 }}</p>
@@ -14,8 +14,9 @@
     <button (click)="addCart()" mat-raised-button color="primary">Agregar al carrito</button>
   </mat-card-actions>
 </mat-card>
-
-<!-- <h3 appHighlight></h3>
-<strong></strong>
-
+<!-- <h3 appHighlight>{{ product.title | uppercase }}
+<img [src]="product.image" alt="">
+<strong>{{ product.price | currency }}</strong>
+<p>{{ product.description | slice:0:10 }}</p>
 <p>{{ today | date:'HH:mm' }}</p> -->
+

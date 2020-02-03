@@ -1,5 +1,3 @@
-// el app.module es global
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +12,10 @@ import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,4 +28,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

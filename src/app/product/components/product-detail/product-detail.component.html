@@ -1,5 +1,5 @@
-<div *ngIf="product"  >
-  <div class="cont">
+<div *ngIf="product">
+  <div>
     <img [src]="product.image" alt="">
   </div>
   <div>
@@ -9,9 +9,8 @@
     </ul>
     <p>{{ product.description }}</p>
   </div>
-  <button (click)="createProduct()">Crear</button>
-  <button (click)="updateProduct()">Update</button>
-  <button (click)="deleteProduct()">Delete</button>
+  <button (click)="createProduct()">crear</button>
+  <button (click)="updateProduct()">update</button>
+  <button (click)="deleteProduct()">delete</button>
 </div>
-
 

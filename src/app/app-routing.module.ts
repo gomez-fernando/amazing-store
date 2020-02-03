@@ -13,7 +13,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/home',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'home',
@@ -22,20 +22,18 @@ const routes: Routes = [
       {
         path: 'products',
         canActivate: [AdminGuard],
-        loadChildren: () =>
-          import('./product/product.module').then(m => m.ProductModule)
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         path: 'contact',
         canActivate: [AdminGuard],
-        loadChildren: () =>
-          import('./contact/contact.module').then(m => m.ContactModule)
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
         path: 'demo',
         canActivate: [AdminGuard],
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
-      }
+      },
     ]
   },
   {
@@ -44,19 +42,14 @@ const routes: Routes = [
   },
   {
     path: '**',
-    loadChildren: () =>
-      import('./page-not-found/page-not-found.module').then(
-        m => m.PageNotFoundModule
-      )
-  }
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules
-    })
-  ],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
