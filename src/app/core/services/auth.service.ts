@@ -21,4 +21,12 @@ export class AuthService {
   logout() {
     return this.af.auth.signOut();
   }
+
+  hasUser() {
+    return this.af.authState;
+      // .subscribe(user => {
+      //   console.log(user == null);
+
+      // });
+  }
 }
